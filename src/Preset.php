@@ -25,7 +25,7 @@ class Preset extends AlphaPreset
 
     public static function updatePackageArray($packages)
     {
-        return array_merge(['tailwindcss' => '^1.1.4']);
+        return array_merge(['tailwindcss' => '^1.1.4'], $packages);
     }
 
     public static function updateMix()
