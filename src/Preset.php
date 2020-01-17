@@ -1,6 +1,6 @@
 <?php
 
-namespace Alpha\AlphaPreset;
+namespace AlphaPreset;
 
 use Illuminate\Support\Arr;
 use Illuminate\Filesystem\Filesystem;

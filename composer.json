@@ -1,5 +1,5 @@
 {
-    "name": "alpha/laravel-preset",
+    "name": "alphapreset/laravel-preset",
     "description": "Alpha laravel preset.",
     "keywords": ["laravel", "laravel-preset", "alpha"],
     "license": "MIT",
@@ -13,12 +13,12 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Alpha\\AlphaPreset\\": "src/"
+            "AlphaPreset\\": "src/"
         }
     },
     "extra": {
         "laravel": {
-            "providers": ["Alpha\\AlphaPreset\\AlphaServiceProvider"]
+            "providers": ["AlphaPreset\\AlphaServiceProvider"]
         }
     }
 }

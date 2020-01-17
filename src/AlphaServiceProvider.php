@@ -1,6 +1,6 @@
 <?php
 
-namespace Alpha\AlphaPreset;
+namespace AlphaPreset;
 
 use Alpha\Preset;
 use Illuminate\Support\ServiceProvider;
