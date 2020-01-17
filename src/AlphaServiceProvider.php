@@ -2,7 +2,7 @@
 
 namespace AlphaPreset;
 
-use Alpha\Preset;
+use AlphaPreset\Preset;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;
 

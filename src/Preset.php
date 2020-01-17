@@ -39,12 +39,3 @@ class Preset extends AlphaPreset
         copy(__DIR__.'/stubs/bootstrap.js', resource_path('js/bootstrap.js'));
     }
 }
-
-// "axios": "^0.19",
-//         "cross-env": "^5.1",
-//         "laravel-mix": "^5.0.1",
-//         "lodash": "^4.17.13",
-//         "resolve-url-loader": "^2.3.1",
-//         "sass": "^1.15.2",
-//         "sass-loader": "^8.0.0",
-//         "vue": "^2.5.17"
