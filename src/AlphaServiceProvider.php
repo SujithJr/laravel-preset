@@ -17,7 +17,7 @@ class AlphaServiceProvider extends ServiceProvider
     {
         PresetCommand::macro('alpha', function ($command) {
             Preset::install();
-            $command->info("Finished! Please run 'npm run dev' to compile your assets.");
+            $command->info("\nFinished!\n\n* Please run 'npm install', if you haven't yet.\n\n* And run 'npm run dev' to compile your assets.\n");
         });
     }
 }

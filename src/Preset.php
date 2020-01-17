@@ -38,16 +38,14 @@ class Preset extends LaravelPreset
     public static function updateScripts()
     {
         copy(__DIR__.'/stubs/bootstrap.js', resource_path('js/bootstrap.js'));
+        copy(__DIR__.'/stubs/welcome.blade.php', resource_path('views/welcome.blade.php'));
         copy(__DIR__.'/stubs/tailwind.js', base_path('tailwind.js'));
     }
 
     public static function updateStyles()
     {
         $file = new Filesystem();
-        $content = '@tailwind base;
-@tailwind components;
-@tailwind utilities;
-        ';
+        $content = '@tailwind base;' . PHP_EOL . '@tailwind components;' . PHP_EOL . '@tailwind utilities;';
         $file->put(resource_path('sass/app.scss'), $content);
     }
 }
