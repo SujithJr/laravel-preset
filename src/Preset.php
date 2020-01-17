@@ -13,6 +13,7 @@ class Preset extends AlphaPreset
         static::cleanSassDirectory();
         static::updatePackages();
         static::updateMix();
+        static::updateWelcome();
         static::updateScripts();
         static::updateStyles();
     }
@@ -33,6 +34,11 @@ class Preset extends AlphaPreset
     public static function updateMix()
     {
         copy(__DIR__.'/stubs/webpack.mix.js', base_path('webpack.mix.js'));
+    }
+
+    public static function updateWelcome()
+    {
+        copy(__DIR__.'/stubs/welcome.blade.php', resource_path('views/welcome.blade.php'));
     }
 
     public static function updateScripts()
