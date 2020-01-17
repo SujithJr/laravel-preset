@@ -15,4 +15,3 @@ Outputs,
 - [x] Sass file is scaffolded with tailwind base imports/calls
 - [x] Tailwind is added to webpack.mix.js
 - [x] Tailwind config file is generated as "tailwind.js" in the root directory
-- [x] Lodash is removed from package.json
