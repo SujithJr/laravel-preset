@@ -2,7 +2,7 @@
 
 namespace AWL;
 
-use AlphaPreset\Preset;
+use AWL\Preset;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;
 
