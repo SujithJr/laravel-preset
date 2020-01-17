@@ -1,19 +1,20 @@
 <?php
 
-namespace AlphaPreset;
+namespace AWL;
 
 use Illuminate\Support\Arr;
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Foundation\Console\Presets\Preset as AlphaPreset;
+use Illuminate\Foundation\Console\Presets\Preset as LaravelPreset;
 
-class Preset extends AlphaPreset
+class Preset extends LaravelPreset
 {
     public static function install()
     {
         static::cleanSassDirectory();
-        static::updatePackages();
+        static::updatePackages(false);
         static::updateMix();
         static::updateScripts();
+        static::updateStyles();
     }
 
     public static function cleanSassDirectory()
@@ -24,7 +25,7 @@ class Preset extends AlphaPreset
 
     public static function updatePackageArray($packages)
     {
-        return array_merge(['laravel-mix-tailwind' => '^2.1.7'], Arr::except($packages, [
+        return array_merge(['tailwindcss' => '^1.1.4'], Arr::except($packages, [
             'lodash'
         ]));
     }
@@ -37,5 +38,16 @@ class Preset extends AlphaPreset
     public static function updateScripts()
     {
         copy(__DIR__.'/stubs/bootstrap.js', resource_path('js/bootstrap.js'));
+        copy(__DIR__.'/stubs/tailwind.js', base_path('tailwind.js'));
+    }
+
+    public static function updateStyles()
+    {
+        $file = new Filesystem();
+        $content = '@tailwind base;
+@tailwind components;
+@tailwind utilities;
+        ';
+        $file->put(resource_path('sass/app.scss'), $content);
     }
 }

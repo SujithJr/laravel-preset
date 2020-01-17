@@ -1,6 +1,6 @@
 <?php
 
-namespace AlphaPreset;
+namespace AWL;
 
 use AlphaPreset\Preset;
 use Illuminate\Support\ServiceProvider;
@@ -15,7 +15,7 @@ class AlphaServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        PresetCommand::macro('alphapreset', function ($command) {
+        PresetCommand::macro('alpha', function ($command) {
             Preset::install();
         });
     }

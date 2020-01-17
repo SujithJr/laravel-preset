@@ -13,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "AlphaPreset\\": "src/"
+            "AWL\\": "src/"
         }
     },
     "extra": {
