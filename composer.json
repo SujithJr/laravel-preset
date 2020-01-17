@@ -1,0 +1,24 @@
+{
+    "name": "alpha/laravel-preset",
+    "description": "Alpha laravel preset.",
+    "keywords": ["laravel", "laravel-preset", "alpha"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sujith Kumar",
+            "email": "sujith@alphaweblab.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Alpha\\AlphaPreset\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Alpha\\AlphaPreset\\AlphaServiceProvider"]
+        }
+    }
+}
