@@ -4,14 +4,14 @@ namespace AWL;
 
 use Illuminate\Support\Arr;
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Foundation\Console\Presets\Preset as LaravelPreset;
+use Illuminate\Foundation\Console\Presets\Preset as AlphaPreset;
 
-class Preset extends LaravelPreset
+class Preset extends AlphaPreset
 {
     public static function install()
     {
         static::cleanSassDirectory();
-        static::updatePackages(false);
+        static::updatePackages();
         static::updateMix();
         static::updateScripts();
         static::updateStyles();
@@ -38,7 +38,6 @@ class Preset extends LaravelPreset
     public static function updateScripts()
     {
         copy(__DIR__.'/stubs/bootstrap.js', resource_path('js/bootstrap.js'));
-        copy(__DIR__.'/stubs/welcome.blade.php', resource_path('views/welcome.blade.php'));
         copy(__DIR__.'/stubs/tailwind.js', base_path('tailwind.js'));
     }
 
