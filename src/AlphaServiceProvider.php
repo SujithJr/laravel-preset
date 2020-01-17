@@ -15,7 +15,7 @@ class AlphaServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        PresetCommand::macro('alpha', function ($command) {
+        PresetCommand::macro('alphapreset', function ($command) {
             Preset::install();
         });
     }
